@@ -1,0 +1,56 @@
+main {
+	padding: 2rem 1.4rem 2rem 3rem;
+}
+.section.title {
+	font-size: var(--h1);
+	color: var(--heading);
+	background-color: var(--back-light);
+	display: inline-block;
+	text-align: center;
+	width: 50%;
+	margin-left: 25%;
+	padding: 10px;
+}
+.full {
+	width: 100%;
+}
+.textCenter {
+	text-align: center;
+}
+.onePagerIntro {
+	background-color: var(--second);
+	color: white;
+	padding: 20px;
+	border-radius: 6px;
+	margin: 20px;
+}
+.onePagerIntro ul {
+	margin-left: 20px;
+}
+.onePagerIntro a {
+	color: white;
+}
+.onePagerIntro .buildInfo {
+	margin-left: 50px;
+	font-size: small;
+	background-color: var(--back-light);
+	color: var(--heading);
+	padding: 10px;
+	border-radius: 24px;
+	width: auto;
+	display: inline-block;
+}
+.onePagerIntro .buildInfo a {
+	color: var(--heading);
+}
+footer {
+	width: 100%;
+	background-color: var(--second);
+	color: white;
+	padding: 20px;
+}
+.buildStamp, .commitSha {
+	display: inline-block;
+	margin-left: 6px;
+	font-family: 'Fira Mono', monospace;
+}

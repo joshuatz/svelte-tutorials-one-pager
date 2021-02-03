@@ -1,18 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html class="theme-default typo-default" lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Page Title</title>
+		<title>Svelte Tutorials - Single Page Doc</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 		<link rel="stylesheet" type="text/css" href="./prism.css" />
 		<link rel="stylesheet" type="text/css" href="./global.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css" integrity="sha256-nwDipdLn93O1CZGoRDor0i4CLmDQb+mdg/yaYMUCuLM=" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="./svelte-site-kit-base.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css"
+			integrity="sha256-nwDipdLn93O1CZGoRDor0i4CLmDQb+mdg/yaYMUCuLM="
+			crossorigin="anonymous"
+		/>
 	</head>
 	<body>
+		<header>
+			<div class="onePagerIntro">
+				<p>
+					Welcome! This is an auto-generated build of the Svelte tutorial docs, compiled as a one-page
+					document.
+				</p>
+				<p>Relevant links:</p>
+				<ul>
+					<li>
+						<a href="https://svelte.dev/tutorial/basics" target="_blank">Official Svelte Tutorial Site</a>
+					</li>
+					<li>
+						<a href="https://svelte.dev/docs" target="_blank">Main Svelte Docs (API)</a>
+					</li>
+					<li>
+						<a href="https://github.com/joshuatz/svelte-tutorials-one-pager" target="_blank"
+							>The code that builds this page</a
+						>
+					</li>
+				</ul>
+				<div class="buildInfo">
+					<div>Built at: <div class="buildStamp">{{buildAtReadable}}</div></div>
+					<div>Commit SHA: <a class="commitSha" href="https://github.com/sveltejs/svelte/commit/{{sha}}">{{sha}}</a></div>
+				</div>
+			</div>
+		</header>
 		<main>{{tutContent}}</main>
-		<footer>Built at: {{buildAtReadable}}</footer>
-		<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js" integrity="sha256-fZOd7N/oofoKcO92RzxvC0wMm+EvsKyRT4nmcmQbgzU=" crossorigin="anonymous"></script>
+		<footer>
+			<div>Built at: <span class="buildStamp">{{buildAtReadable}}</span></div>
+			<div>Commit SHA: <a href="https://github.com/sveltejs/svelte/commit/{{sha}}">{{sha}}</a></div>
+		</footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js"
+			integrity="sha256-fZOd7N/oofoKcO92RzxvC0wMm+EvsKyRT4nmcmQbgzU="
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
