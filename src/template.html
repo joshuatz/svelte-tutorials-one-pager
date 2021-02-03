@@ -26,27 +26,48 @@
 				<p>Relevant links:</p>
 				<ul>
 					<li>
-						<a href="https://svelte.dev/tutorial/basics" target="_blank">Official Svelte Tutorial Site</a>
+						<a href="https://svelte.dev/tutorial/basics" target="_blank" rel="noopener"
+							>Official Svelte Tutorial Site</a
+						>
 					</li>
 					<li>
-						<a href="https://svelte.dev/docs" target="_blank">Main Svelte Docs (API)</a>
+						<a href="https://svelte.dev/docs" target="_blank" rel="noopener">Main Svelte Docs (API)</a>
 					</li>
 					<li>
-						<a href="https://github.com/joshuatz/svelte-tutorials-one-pager" target="_blank"
+						<a href="https://github.com/joshuatz/svelte-tutorials-one-pager" target="_blank" rel="noopener"
 							>The code that builds this page</a
 						>
 					</li>
 				</ul>
 				<div class="buildInfo">
-					<div>Built at: <div class="buildStamp">{{buildAtReadable}}</div></div>
-					<div>Commit SHA: <a class="commitSha" href="https://github.com/sveltejs/svelte/commit/{{sha}}">{{sha}}</a></div>
+					<div>
+						Built at:
+						<div class="buildStamp">{{buildAtReadable}}</div>
+					</div>
+					<div>
+						Commit SHA:
+						<a class="commitSha" href="https://github.com/sveltejs/svelte/commit/{{sha}}">{{sha}}</a>
+					</div>
+					<a
+						href="https://app.netlify.com/sites/agitated-engelbart-f96128/deploys"
+						target="_blank"
+						rel="noopener"
+					>
+						<img
+							src="https://api.netlify.com/api/v1/badges/1c8f83a6-01df-4112-8703-fc2dfce23392/deploy-status"
+							alt="Netlify deploy status badge"
+						/>
+					</a>
 				</div>
 			</div>
 		</header>
 		<main>{{tutContent}}</main>
 		<footer>
 			<div>Built at: <span class="buildStamp">{{buildAtReadable}}</span></div>
-			<div>Commit SHA: <a href="https://github.com/sveltejs/svelte/commit/{{sha}}">{{sha}}</a></div>
+			<div>
+				Commit SHA:
+				<a href="https://github.com/sveltejs/svelte/commit/{{sha}}" target="_blank" rel="noopener">{{sha}}</a>
+			</div>
 		</footer>
 		<script
 			src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js"

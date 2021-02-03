@@ -63,7 +63,13 @@ async function cloneAndBuild(forceReCompile = false) {
 	};
 
 	console.log(`Converting markdown to HTML & compiling with template`);
-	compileToDistHtml(combinedMd, freshBuildInfo);
+	try {
+		compileToDistHtml(combinedMd, freshBuildInfo);
+	} catch (err) {
+		console.error(`Failed to compile combined markdown to HTML!`);
+		throw err;
+	}
+
 	fs.writeJSONSync(buildInfoFile, freshBuildInfo);
 
 	// Copy static files
@@ -117,12 +123,12 @@ const buildOnePagerFromLocal = async () => {
 					// Inject official tutorial link
 					processedMd = `\n<a class="officialTutLink" href="${getOfficialTutLink(
 						chapterDirName
-					)}" target="_blank">™ Official Tutorial Page</a>\n\n${processedMd}`;
+					)}" target="_blank" rel="noopener">™ Official Tutorial Page</a>\n\n${processedMd}`;
 
 					// Inject github link
 					processedMd = `\n<a class="githubLink" href="${getSrcRepoLink(
 						chapterDirPath
-					)}" target="_blank">💾 Source Code</a>\n\n${processedMd}`;
+					)}" target="_blank" rel="noopener">💾 Source Code</a>\n\n${processedMd}`;
 
 					// Inject title as h2
 					// Give it a prefix to avoid global heading conflicts

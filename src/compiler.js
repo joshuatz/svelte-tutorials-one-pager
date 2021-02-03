@@ -39,6 +39,7 @@ const compileToDistHtml = async (onePagerMd, buildInfo) => {
 	compiledHtml = fixupHtml(compiledHtml);
 
 	// Write back out compiled HTML
+	fs.ensureFileSync(outPath);
 	fs.writeFileSync(outPath, compiledHtml, { encoding: 'utf-8' });
 };
 
