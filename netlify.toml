@@ -1,0 +1,10 @@
+[build]
+command = "npm run build"
+publish = "dist"
+
+# Cache build meta info, and already built HTML
+# This should let the entire build step be skipped if triggered when there have been no changes to actual tutorial content
+[[plugins]]
+package = "netlify-plugin-cache"
+	[plugins.inputs]
+	paths = ["build-info.json", "dist"]
