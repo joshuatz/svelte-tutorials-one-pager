@@ -26,6 +26,9 @@ const copyFiles = async () => {
 	await Promise.all([...degitCopyOps, ...rootCopyOps]);
 
 	await fs.copy(`${__dirname}/style.css`, `${distPath}/style.css`);
+
+	// Could be useful for status badges, etc.
+	await fs.copy(`${__dirname}/../build-info.json`, `${distPath}/build-info.json`);
 };
 
 module.exports = {

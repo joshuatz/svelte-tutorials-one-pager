@@ -1,4 +1,5 @@
-# Svelte Tutorial - One Pager
+# Svelte Tutorial - One Pager [![Netlify Status](https://api.netlify.com/api/v1/badges/1c8f83a6-01df-4112-8703-fc2dfce23392/deploy-status)](https://app.netlify.com/sites/agitated-engelbart-f96128/deploys)
+
 > This repo takes all the individual docs that make up the [official Svelte tutorial pages](https://svelte.dev/tutorial/basics), and combines them into one giant single-page document (similar to [the official API docs](https://svelte.dev/docs)).
 
 ## How it Works
